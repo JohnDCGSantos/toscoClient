@@ -1,0 +1,321 @@
+html, body {
+  margin: 0;
+  padding: 0px;
+  width: 100vw; /* Garante largura total sem exceder */
+  height: 100vh; /* Garante altura total */
+  box-sizing: border-box;
+ 
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+h1{
+  color: aliceblue !important;
+}
+p{
+  color: aliceblue;
+}
+.CarouselBox{
+  width:100%;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(132, 118, 109, 0.8);
+  flex-direction: column;
+  border-top: 5px solid rgba(208, 100, 33 , 0.8);
+  border-bottom:5px solid rgba(208, 100, 33 , 0.8);
+  margin-top: 1px;
+  
+ 
+}
+
+#carouselExample {
+  max-width: 600px; /* Width of the entire carousel */
+  height: 400px ;
+padding: 5px;
+}
+.carousel-control-next-icon{
+  background-color:black;
+
+  
+}
+.carousel-control-prev-icon{
+  background-color:black;
+
+  
+}
+.carousel-inner {
+  width: 300px;
+  height: 100%; /* Altura personalizada do carousel */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  display: flex;
+}
+
+.carousel-item img {
+  width: 100%; /* Ensures the image scales to the width of the container */
+  height: 100%; /* Matches the height of the carousel */
+  object-fit: cover; /* Fills the area, but keeps aspect ratio */
+  object-position: center; /* Focuses the center of the image */
+  border-radius: 10px; /* Optional: Matches the carousel shape */
+}
+
+
+.contactsBox{
+  background-color: rgba(132, 118, 109, 0.8);
+
+  width: 100%;
+  height:100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-top: 5px solid rgba(208, 100, 33 , 0.8);
+   border-bottom: 5px solid rgba(208, 100, 33 , 0.8);
+gap:40px;
+   margin-top: 1px;
+   padding: 10px;
+
+}
+.contactsContainer{
+  width: 600px;
+  height: 100px;
+}
+
+.mapContainer{
+width: 80%;
+  height: 500px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.mapCont{
+  width: 70%;
+  height: 300px;
+  margin-bottom: 5px;
+  border: 5px solid rgba(208, 100, 33 , 0.8);
+  max-width: 600px; /* Largura máxima para o mapa */
+
+}
+
+.contactInfo {
+  background-color: rgba(132, 118, 109, 0.8);
+
+  width: 100%;
+  height:100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-top: 5px solid rgba(208, 100, 33 , 0.8);
+   border-bottom: 5px solid rgba(208, 100, 33 , 0.8);
+gap:20px;
+   margin-top: 1px;
+   padding: 10px;
+
+}
+.boxcontactos{
+  width: 100%;
+  height:100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   gap:10px
+
+}
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;  
+  gap:10px;
+  height:120px;
+  width: auto;
+}
+.contactItem p {
+margin-left: 0 !important;
+}
+.contactItem2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;  height:120px;
+  width: auto;
+}
+.contactItem2 p {
+  margin: 0;
+}
+
+.contactItemLocal {
+  display: flex;
+  align-items: flex-start;
+  height: 35px;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(132, 118, 109, 0.8); /* Cor de fundo do rodapé */
+  color: white; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  padding: 15px 0; /* Espaçamento vertical */
+  font-size: 14px; /* Tamanho da fonte */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra no topo */
+  position: relative; /* Ajusta a posição */
+  bottom: 0; /* Fixa no fundo */
+}
+
+
+.contactItem p {
+  margin-left: 20px;
+  text-align: center;
+}
+
+
+
+.menu-container {
+  margin-top: 130px; /* Altura da navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(204, 197, 64, 0.8);
+  border-top: 5px solid rgba(208, 100, 33, 0.8);
+  border-bottom: 5px solid rgba(208, 100, 33, 0.8);
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1px;
+
+}
+
+.menu-container h1 {
+  margin-bottom: 20px;
+  color:rgb(221, 51, 9) !important
+}
+.dishes-section h2,
+.soup-section h2,
+.sides-section h2,
+.desserts-section h2,
+.extras-section h2, .bebidas-section h2,
+.destilados-section h2{
+  display: flex;
+ justify-content: center;
+ color:rgb(221, 51, 9)
+}
+.dishes-section p{
+color:rgb(221, 51, 9, 0.8)
+}
+section {
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  text-align: left;
+  color: rgba(208, 100, 33, 1);
+}
+
+.menu-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(208, 100, 33, 0.8);
+}
+
+.menu-item h3 {
+  margin: 0;
+  color: rgb(221, 51, 9, 0.8);
+
+}
+
+.menu-item p {
+  margin: 5px 0;
+  color: rgb(221, 51, 9,0.6);
+
+}
+
+.menu-item2{
+  display:flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+gap: 20px
+}
+.menu-item2 {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(208, 100, 33, 0.8);
+}
+
+.menu-item2 h3 {
+  margin: 0;
+  color: rgb(221, 51, 9, 0.8);
+}
+
+.menu-item2 p {
+  margin: 5px 0;
+  color: rgb(221, 51, 9, 0.6);
+}
+
+.menu-item3 {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgba(208, 100, 33, 0.8);
+  width: 250px;
+}
+.tituloSlide{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.verMenu {
+  height: 50px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background-color: rgba(208, 100, 33, 0.9);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: blink 1.8s infinite; /* Adiciona o efeito de piscar */
+}
+
+.verMenu:hover {
+  background-color: rgba(208, 100, 33, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.verMenu:active {
+  transform: translateY(2px);
+}
+
+/* Define a animação de piscar */
+@keyframes blink {
+  0% {
+    opacity: 2; /* Visível */
+  }
+  50% {
+    opacity: 0.5; /* Invisível */
+  }
+  100% {
+    opacity: 2; /* Visível novamente */
+  }
+}

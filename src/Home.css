@@ -1,0 +1,141 @@
+.heroSection {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    border-bottom: 5px solid rgba(208, 100, 33 , 0.8);
+
+  }
+  .heroSection::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(-25deg);
+    animation: shine 8s infinite; /* Brilho em sincronização com pulse */
+    z-index: 1; /* Coloca acima da heroImg */
+    pointer-events: none; /* Não interfere em cliques */
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -150%;
+    }
+    50% {
+      left: 150%;
+    }
+    100% {
+      left: 150%;
+    }}
+  .heroMask {
+    position: relative; /* Mantenha o contexto de posicionamento para os filhos */
+    background-color: rgba(23, 15, 2, 0.217); /* Cor semitransparente */
+    width: 100%;
+    height: 100%;
+    display: flex; /* Flexbox para centralizar conteúdo */
+    flex-direction: column;
+    justify-content: center; /* Alinha verticalmente */
+    align-items: center; /* Alinha horizontalmente */
+  }
+  
+  .heroImg {
+    position: absolute; /* Fixa a imagem dentro da .heroMask */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Coloca a imagem no fundo */
+  }
+  
+  .textHome {
+    z-index: 2; /* Garante que o texto fique acima da máscara */
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    width: 90%;
+  }
+  
+  .textHome h1 {
+    line-height: 1.5;
+  }
+  
+  .formSection{
+display: flex;
+justify-content: space-around;
+margin: 20px;
+border-radius: 10px;
+
+
+  }
+  .form{
+padding: 40px;    border-radius: 30px;
+    background-color: rgba(0, 255, 128, 0.495);
+    width: 300px;
+  }
+  .form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0px;
+    margin-bottom: 10px;
+
+  }
+  
+  label {
+    font-size: 20px;
+    margin-bottom: 0px;
+    width: 80%;
+  }
+  
+  input {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 80%;
+    height: 40px;
+    box-sizing: border-box;
+  }
+  .textForm{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #buildingType{
+    width:80%;
+    height:40px
+  }
+  .dogButton {
+    margin:50px;
+ z-index: 9999;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-block;
+    width: 100px;  /* Ajuste o tamanho conforme necessário */
+    height: 5px;
+    border-radius: 10px;
+  }
+  
+  .dogButton svg {
+    width: 00%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    fill:red
+  }
+  .dogButton button {
+    
+    background-color: rgba(208, 100, 33 , 0.8);
+  }
+  
+  .dogButton:hover svg {
+    transform: scale(1.1); /* Exemplo de animação ao passar o mouse */
+  }
