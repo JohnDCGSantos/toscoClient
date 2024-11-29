@@ -23,7 +23,7 @@ const ContactMap = () => {
 
 
       <div className='mapContainer'> 
-       <div ><h1>Do que estás à espera?</h1></div>
+       <h1>Do que estás à espera?</h1>
         
       <div className="contactItem5">
             
