@@ -10,11 +10,9 @@ const Menu = () => {
         const extrasRef = useRef(null);
         const bebidasRef = useRef(null);
         const destiladosRef = useRef(null);
-        const menuRef = useRef(null);
 
     
         const sections = [
-            { name: 'Menu', ref: menuRef },
 
             { name: 'Pratos Principais', ref: dishesRef },
             { name: 'Sopa', ref: soupRef },
@@ -194,8 +192,7 @@ const Menu = () => {
         </div>
 </div>
     <div className="menu-container">
-    <section ref={menuRef} >
-        <div style={{width:'80%', height:'100px'}}></div>
+    <section className='menuTit'><h2>Menu</h2> 
     </section>
 
       {/* Secção dos pratos principais */}
