@@ -1,6 +1,6 @@
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import '../NavBar.css';
+import '../navBar.css';
 import logoImg from '../assets/toscoLogo.jpg';
 
 const Navbar = () => {
