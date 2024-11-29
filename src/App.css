@@ -208,7 +208,7 @@ margin-left: 0 !important;
   width: 100%;
   height: 100%;
   margin-bottom: 1px;
-margin-top: 200px;
+margin-top: 50px;
 }
 
 .menu-container h1 {
@@ -372,7 +372,7 @@ text-align: center;
 }
 
 .dropdown-container {
-  background-color: rgba(185, 183, 155, 0.8);
+  background-color: rgba(185, 183, 155, 1);
   color: rgb(221, 51, 9);
   background-color: transparent;
   height:40px ;
@@ -383,24 +383,19 @@ top:150px;
   justify-content: center; 
 }
 .dropdown-container select {
-  background-color: rgba(185, 183, 155, 0.8);
+  background-color: rgb(185, 183, 155);
   color: rgb(221, 51, 9);
-  background-color: transparent;
   height:40px ;
 position: fixed;
-top:150px;
-width: 80%;
-}
-.test{
-  width: 80%;
-}
-select {
-  width: 100%;
-  padding: 0px;
-  font-size: 16px;
-  color: rgb(221, 51, 9) ;
-  height:40px ;
+top:140px;
+width: 80%; 
   border: 2px solid rgba(221, 51, 9,0.7);
+font-size: 16px;
+padding-right:5px; 
+text-align: center;
+}
 
+option{
+  margin:5px
 }
 
