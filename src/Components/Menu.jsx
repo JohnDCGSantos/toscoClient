@@ -1,6 +1,60 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 const Menu = () => {
+  
+        // Referências para cada seção
+        const dishesRef = useRef(null);
+        const soupRef = useRef(null);
+        const sidesRef = useRef(null);
+        const dessertsRef = useRef(null);
+        const extrasRef = useRef(null);
+        const bebidasRef = useRef(null);
+        const destiladosRef = useRef(null);
+    
+        const sections = [
+            { name: 'Menu', ref: dishesRef },
+
+            { name: 'Pratos Principais', ref: dishesRef },
+            { name: 'Sopa', ref: soupRef },
+            { name: 'Acompanhamentos', ref: sidesRef },
+            { name: 'Sobremesas', ref: dessertsRef },
+            { name: 'Extras', ref: extrasRef },
+            { name: 'Bebidas', ref: bebidasRef },
+            { name: 'Destilados', ref: destiladosRef },
+          ];
+        
+          const [activeSection, setActiveSection] = useState(sections[0].name);
+        
+          const scrollToSection = (ref) => {
+            if (ref.current) {
+              const offset = -window.innerHeight / 4;
+              const elementPosition = ref.current.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = elementPosition + offset;
+        
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+              });
+            }
+          };
+        
+          const handleScroll = () => {
+            sections.forEach((section) => {
+              if (
+                section.ref.current &&
+                section.ref.current.getBoundingClientRect().top <= window.innerHeight / 2 &&
+                section.ref.current.getBoundingClientRect().bottom > window.innerHeight / 2
+              ) {
+                setActiveSection(section.name);
+              }
+            });
+          };
+        
+          useEffect(() => {
+            window.addEventListener('scroll', handleScroll);
+            return () => window.removeEventListener('scroll', handleScroll);
+          }, []);
+        
   const dishes = [
     {
       name: 'ROTTWEILER (cachorrinho)',
@@ -81,8 +135,8 @@ const Menu = () => {
 
   const extras = [
     { name: 'Ovo', price: '€0.80' },
-    { name: 'Cebola/Picles', price: '€0.60' },
-    { name: 'Queijo/Fiambre', price: '€0.70' },
+    { name: 'Cebola / Picles', price: '€0.60' },
+    { name: 'Queijo / Fiambre', price: '€0.70' },
     { name: 'Rúcula', price: '€0.50' },
     { name: 'Presunto', price: '€1.20' },
     { name: 'Linguiça', price: '€1.00' },
@@ -120,11 +174,27 @@ const Menu = () => {
   ]
   return (
     <div className='menuMask'>
+        <div className='test'>
+         <div className="dropdown-container" >
+          <select
+            value={activeSection}
+            onChange={(e) => {
+              const selectedSection = sections.find((section) => section.name === e.target.value);
+              if (selectedSection) scrollToSection(selectedSection.ref);
+            }}
+          >
+            {sections.map((section, index) => (
+              <option key={index} value={section.name}>
+                {section.name}
+              </option>
+            ))}
+          </select>
+        </div>
+</div>
     <div className="menu-container">
-      <h1>Menu</h1>
-
+     
       {/* Secção dos pratos principais */}
-      <section className="dishes-section">
+      <section ref={dishesRef} className="dishes-section">
         <h2>Pratos Principais</h2>
         <p>* com bolo do caco</p>
         {dishes.map((dish, index) => (
@@ -140,7 +210,7 @@ const Menu = () => {
       </section>
 
       {/* Secção da sopa */}
-      <section className="soup-section">
+      <section ref={soupRef} className="soup-section">
         <h2>Sopa</h2>
         <div className="menu-item">
           <h3>{soup.name}</h3>
@@ -149,7 +219,7 @@ const Menu = () => {
       </section>
 
       {/* Secção dos acompanhamentos */}
-      <section className="sides-section">
+      <section ref={sidesRef} className="sides-section">
         <h2>Acompanhamentos</h2>
         {sides.map((side, index) => (
           <div key={index} className="menu-item">
@@ -160,7 +230,7 @@ const Menu = () => {
       </section>
 
       {/* Secção das sobremesas */}
-      <section className="desserts-section">
+      <section ref={dessertsRef} className="desserts-section">
         <h2>Sobremesas</h2>
         {desserts.map((dessert, index) => (
           <div key={index} className="menu-item">
@@ -171,9 +241,9 @@ const Menu = () => {
       </section>
 
       {/* Secção dos extras */}
-      <section className="extras-section">
+      <section ref={extrasRef}className="extras-section">
         <h2>Extras</h2>
-        <div className="menu-item2"> 
+        <div ref={extrasRef} className="menu-item2"> 
         {extras.map((extra, index) => (
           <div key={index} className="menu-item3">
             <h3>{extra.name}</h3>
@@ -181,7 +251,7 @@ const Menu = () => {
           </div>
         ))}</div>
       </section>
-      <section className="bebidas-section">
+      <section ref={bebidasRef}className="bebidas-section">
         <h2>Bebidas</h2>
         <div className="menu-item"> 
         {bebidas.map((bebida, index) => (
@@ -193,7 +263,7 @@ const Menu = () => {
       </section>
       <section className="destilados-section">
         <h2>Destilados</h2>
-        <div className="menu-item2"> 
+        <div ref={destiladosRef} className="menu-item2"> 
         {destilados.map((destilado, index) => (
           <div key={index} className="menu-item3">
             <h3>{destilado.name}</h3>
