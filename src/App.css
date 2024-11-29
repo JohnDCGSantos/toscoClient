@@ -291,8 +291,8 @@ gap: 20px
 }
 .verMenu {
   position: relative;
-
-  margin-left: 20px; 
+text-align: center;
+ 
   height: 50px;
   padding: 12px 25px;
   border-radius: 30px;
