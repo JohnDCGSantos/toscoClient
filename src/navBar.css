@@ -44,3 +44,6 @@ li{
 
 .Hcontent a{
     text-decoration: none;}
+    .Hcontent li {
+        cursor: pointer;  /* Isso muda o cursor para ponteiro quando o mouse passa sobre o item */
+      }
