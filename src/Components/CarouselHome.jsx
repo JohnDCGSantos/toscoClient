@@ -13,8 +13,10 @@ import { useNavigate } from 'react-router';
 
 const CarouselHome = () => { 
            const nav= useNavigate()
-
+          
     const goToMenu=()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
         nav('/menu')
     }
   return (
