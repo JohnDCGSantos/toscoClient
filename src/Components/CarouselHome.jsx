@@ -21,11 +21,12 @@ const CarouselHome = () => {
     <>
     
     <div className='CarouselBox'>
-        <div className='tituloSlide'>
         <h1>Os nossos pratos</h1>
-        <button className='verMenu' onClick={goToMenu} >  Vêr Menu </button>
+        
+      
+        <button className='verMenu' onClick={goToMenu} >  Ver Menu </button>
 
-        </div>
+      
     <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
     <div className="carousel-inner">
     <div className="carousel-item active">

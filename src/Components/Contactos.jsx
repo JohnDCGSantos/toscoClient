@@ -3,9 +3,10 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaClock } from 'react-icons/fa';  // Importando os ícones
+import Pin from '../assets/pin.svg'
 
 // Coordenadas para R. de 5 de Outubro 111, 4100-175 Porto
-const position = [41.159600, -8.630728]; // Coordenadas corrigidas
+const position = [41.159620, -8.630778]; // Coordenadas corrigidas
 
 const ContactMap = () => {
   // Criando o link do Google Maps
@@ -22,9 +23,12 @@ const ContactMap = () => {
 
 
       <div className='mapContainer'> 
-       <div ><h1>Onde estamos</h1></div>
+       <div ><h1>Do que estás à espera?</h1></div>
         
-      <div className="contactItem">
+      <div className="contactItem5">
+            
+            <FaClock size={20} color="#FFA500" /> {/* Ícone de Relógio */}
+            <p>12:00 - 15:30 || 19:00 - 23:00 </p>
             <FaMapMarkerAlt size={30} color="rgb(208, 100, 33 )" /> {/* Ícone de Localização */}
             <p>Rua de 5 de Outubro 111, 4100-175 Porto</p>
           </div>
@@ -41,9 +45,10 @@ const ContactMap = () => {
             />
 
             {/* Adicionando o marcador para a localização */}
-            <Marker position={position} icon={new L.Icon({
-              iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', // Ícone do marcador
-              iconSize: [25, 41], // Tamanho do ícone
+            <Marker position={position} 
+            icon={new L.Icon({
+              iconUrl: Pin, // Ícone do marcador
+              iconSize: [45, 45], // Tamanho do ícone
               iconAnchor: [12, 41], // Onde o ícone vai estar ancorado
               popupAnchor: [1, -34], // Onde o pop-up vai aparecer
               shadowSize: [41, 41], // Tamanho da sombra do ícone
@@ -66,14 +71,10 @@ const ContactMap = () => {
    <div className="contactInfo">
    <h1>Contactos</h1>
 <div className='boxcontactos'>
-    <div className="contactItem2">
-            <FaClock size={20} color="#FFA500" /> {/* Ícone de Relógio */}
-            <p>12:00 - 15:30</p>
-            <p>19:00 - 23:00</p>
-          </div> 
+    
           {/* Exibindo o ícone de telefone */}
           <div className="contactItem">
-            <FaPhoneAlt size={20} color="#4CAF50" /> {/* Ícone de Telefone */}
+            <FaPhoneAlt size={30} color="#4CAF50" /> {/* Ícone de Telefone */}
             <p>91919199191</p>
           </div>
 

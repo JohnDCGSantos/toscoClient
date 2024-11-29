@@ -119,6 +119,7 @@ const Menu = () => {
 
   ]
   return (
+    <div className='menuMask'>
     <div className="menu-container">
       <h1>Menu</h1>
 
@@ -200,7 +201,7 @@ const Menu = () => {
           </div>
         ))}</div>
       </section>
-    </div>
+    </div></div>
   );
 };
 
