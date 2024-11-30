@@ -27,8 +27,8 @@ const Menu = () => {
         
           const scrollToSection = (ref) => {
             if (ref.current) {
-              const offset = -window.innerHeight / 4;
-              const elementPosition = ref.current.getBoundingClientRect().top + window.pageYOffset;
+              const offset = -window.innerHeight / 3;
+              const elementPosition = ref.current.getBoundingClientRect().top + window.scrollY;
               const offsetPosition = elementPosition + offset;
         
               window.scrollTo({

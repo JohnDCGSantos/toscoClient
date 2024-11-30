@@ -7,27 +7,19 @@ import Contactos from './Contactos';
 
 const HomeIntro = () => {
   const location = useLocation();
-  const [scrollTriggered, setScrollTriggered] = useState(false); // Controla a rolagem para "contactos"
 
   useEffect(() => {
     // Verifica se há um estado indicando que deve rolar para "contactos"
-    if (location.state?.scrollToContactos && !scrollTriggered) {
+    if (location.state?.scrollToContactos) {
       const element = document.getElementById('contactos');
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-        setScrollTriggered(true); // Marca como rolado
       }
-    } else if (!location.state?.scrollToContactos) {
+    } else {
       // Se não for para contactos, rola para o topo
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }, [location.state, scrollTriggered]);
-
-  useEffect(() => {
-    // Reseta o estado ao desmontar o componente ou navegar para outra página
-    return () => setScrollTriggered(false);
-  }, []);
-
+  }, [location.state]);
   return (
     <>
       <div className="heroSection">

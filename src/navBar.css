@@ -47,3 +47,19 @@ li{
     .Hcontent li {
         cursor: pointer;  /* Isso muda o cursor para ponteiro quando o mouse passa sobre o item */
       }
+
+
+      .logoImg .intrImg.spinning {
+        border-radius: 50%; /* Mantém o formato circular */
+        animation: spin 4s linear ; /* Gira continuamente */
+      }
+      
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg); /* Começa na posição inicial */
+        }
+        100% {
+          transform: rotate(720deg); /* Completa uma rotação */
+        }
+      }
+      

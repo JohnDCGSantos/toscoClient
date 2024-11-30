@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap")
+;
+
 html, body {
   margin: 0;
   padding: 0px;
   width: 100vw; /* Garante largura total sem exceder */
   height: 100vh; /* Garante altura total */
   box-sizing: border-box;
- 
+  font-family: 'Roboto', sans-serif !important; 
+
 }
 
 #root{
@@ -294,6 +298,9 @@ gap: 20px
 flex-direction: column;
 justify-content: center;
 text-align: center;
+border: 2px solid rgba(221, 51, 9,0.7);
+padding: 5px;
+
 
   
 }
