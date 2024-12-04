@@ -6,7 +6,6 @@ html, body {
   width: 100vw; /* Garante largura total sem exceder */
   height: 100vh; /* Garante altura total */
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif !important; 
 
 }
 
