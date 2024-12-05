@@ -394,14 +394,18 @@ top:150px;
   display: flex;
   justify-content: center; 
 }
+.dropdown-container select:focus {
+  outline: none; /* Remove o contorno azul */
+}
+
 .dropdown-container select {
   background-color: rgb(185, 183, 155);
   color: rgb(221, 51, 9);
   height:40px ;
 position: fixed;
-top:140px;
-width: 90%; 
-border-radius: 5px;
+top:130px;
+width: 100%; 
+border-radius: 0px;
   border: 2px solid rgba(221, 51, 9,0.7);
 font-size: 16px;
 padding-right:5px; 

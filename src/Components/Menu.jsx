@@ -27,7 +27,7 @@ const Menu = () => {
         
           const scrollToSection = (ref) => {
             if (ref.current) {
-              const offset = -window.innerHeight / 3;
+              const offset = -window.innerHeight / 5;
               const elementPosition = ref.current.getBoundingClientRect().top + window.scrollY;
               const offsetPosition = elementPosition + offset;
         
@@ -42,8 +42,8 @@ const Menu = () => {
             sections.forEach((section) => {
               if (
                 section.ref.current &&
-                section.ref.current.getBoundingClientRect().top <= window.innerHeight / 2 &&
-                section.ref.current.getBoundingClientRect().bottom > window.innerHeight / 2
+                section.ref.current.getBoundingClientRect().top <= window.innerHeight / 4.3 &&
+                section.ref.current.getBoundingClientRect().bottom > window.innerHeight / 4.3
               ) {
                 setActiveSection(section.name);
               }
